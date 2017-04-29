@@ -40,7 +40,21 @@ var HTMLprojectStart = '<div class="project-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectImage = '<img class="project-image" src="%data%">';
+
+
+
+/*
+**
+** PICK UP HERE: images are a little big, so I should probably shrink them and 
+**     serve up my own copies. Then, continue on with the school stuff. 
+** 
+** todo - should be using Grunt to minify images and serve them up I think. 
+**        Be in the habit of doing things correctly the first time. 
+**
+*/
+
+
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
@@ -178,6 +192,8 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      marker.label = "So this is how you customize a marker..."; 
+      console.log("hello"); 
     });
 
     // this is where the pin actually gets added to the map.
@@ -239,11 +255,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+window.addEventListener('resize', function(e) {
+  // Make sure the map bounds get updated on page resize
+ map.fitBounds(mapBounds);
+});

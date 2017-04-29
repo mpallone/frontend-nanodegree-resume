@@ -1,0 +1,24 @@
+{
+  "name": "frontend-nanodegree-resume",
+  "version": "1.0.0",
+  "description": "udacity project 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpallone/frontend-nanodegree-resume.git"
+  },
+  "author": "Mark Pallone and Udacity",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpallone/frontend-nanodegree-resume/issues"
+  },
+  "homepage": "https://github.com/mpallone/frontend-nanodegree-resume#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-cssmin": "^1.0.2"
+  }
+}
